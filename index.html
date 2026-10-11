@@ -40,8 +40,8 @@
     .warp-ring{position:absolute;left:50%;top:49%;width:clamp(220px,27vw,330px);aspect-ratio:1;border:1px solid #d1a8ee91;border-radius:50%;transform:translate(-50%,-50%) rotateX(62deg) rotateZ(-20deg);box-shadow:0 0 20px #b74cf566,inset 0 0 35px #a54fd722;animation:warp-orbit 24s linear infinite}
     .warp-ring:before,.warp-ring:after{content:"";position:absolute;inset:11%;border:1px dashed #c384e990;border-radius:50%;box-shadow:0 0 19px #bb67f136}
     .warp-ring:after{inset:25%;border-style:solid;border-color:#f0d5ff68;animation:warp-orbit-reverse 17s linear infinite}
-    .warp-core{position:absolute;left:50%;top:48%;width:clamp(72px,10vw,120px);height:clamp(104px,15vw,178px);transform:translate(-50%,-50%);border-radius:50% 50% 14% 14% / 24% 24% 8% 8%;background:radial-gradient(ellipse at 50% 40%,#fff 0,#eccaff 9%,#c25bff 24%,#8d23d7 48%,#401060 76%,transparent 100%);filter:drop-shadow(0 0 17px #d778ff) drop-shadow(0 0 40px #9f38da);animation:warp-core-pulse 3s ease-in-out infinite}
-    .warp-core:before{content:"";position:absolute;left:50%;top:-50%;width:2px;height:155%;transform:translateX(-50%);background:linear-gradient(180deg,transparent,#dca2ff,#fff,#c359ff,transparent);box-shadow:0 0 15px 4px #bd64f788;opacity:.8}
+    .warp-portal-thumb{position:absolute;left:50%;top:48%;width:clamp(112px,13vw,152px);height:clamp(138px,18vw,190px);transform:translate(-50%,-50%);object-fit:cover;object-position:50% 46%;border:1px solid #d6a7ff;border-radius:5px;box-shadow:0 0 18px #d778ffb0,0 0 48px #9f38da88;filter:saturate(1.12) brightness(.78);animation:warp-photo-float 4.5s ease-in-out infinite}
+    @keyframes warp-photo-float{0%,100%{transform:translate(-50%,-50%)}50%{transform:translate(-50%,calc(-50% - 5px))}}
     .warp-star{position:absolute;color:#eed7ff;text-shadow:0 0 12px #bd61ff;animation:warp-twinkle 2.4s ease-in-out infinite}
     .warp-star.s1{left:20%;top:29%;font-size:15px}.warp-star.s2{right:17%;top:39%;font-size:10px;animation-delay:.8s}.warp-star.s3{left:28%;bottom:22%;font-size:9px;animation-delay:1.3s}.warp-star.s4{right:26%;bottom:25%;font-size:13px;animation-delay:.4s}
     .warp-portal-tag{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:max-content;padding:7px 11px;border:1px solid #a86fc4;background:#100c15d9;color:#dec2ef;font-size:8px;letter-spacing:.21em;text-transform:uppercase;box-shadow:0 0 18px #8c3ab542}
@@ -201,7 +201,7 @@
         </div>
         <div class="warp-visual" aria-hidden="true">
           <span class="warp-star s1">✦</span><span class="warp-star s2">✧</span><span class="warp-star s3">✦</span><span class="warp-star s4">✧</span>
-          <div class="warp-ring"></div><div class="warp-core"></div><span class="warp-portal-tag">Ziel erreicht // LTE Portal</span>
+          <div class="warp-ring"></div><img class="warp-portal-thumb" src="assets/lte-portal.webp" alt="LTE-Portal" loading="lazy" decoding="async"><span class="warp-portal-tag">Ziel erreicht // LTE Portal</span>
         </div>
       </div>
     </section>
