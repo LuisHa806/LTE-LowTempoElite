@@ -20,6 +20,26 @@
     .closing{padding:24px 0 110px}.closing-card{display:flex;justify-content:space-between;gap:30px;align-items:center;padding:37px 42px;border:1px solid #5b492a;background:linear-gradient(110deg,#1b1710,#0e0e0d 70%);position:relative;overflow:hidden}.closing-card:after{content:"LTE";position:absolute;font:italic 150px Georgia,serif;color:#d5b45b08;right:20%;top:-40px;pointer-events:none}.closing-card h2{font:500 clamp(27px,3vw,40px)/1.1 Georgia,serif;margin:0 0 8px}.closing-card p{color:#a9a397;font-size:12px;margin:0}.footer{border-top:1px solid #ffffff15;padding:23px 0 32px;display:flex;justify-content:space-between;gap:15px;color:#817b70;font-size:10px;letter-spacing:.04em}.footer b{color:#c9b67e;letter-spacing:.13em}
     .reveal{opacity:0;transform:translateY(25px);transition:opacity .75s ease,transform .75s ease}.reveal.in{opacity:1;transform:none}
     @keyframes float{0%,100%{transform:translateY(0) rotateY(-8deg) rotateX(3deg)}50%{transform:translateY(-12px) rotateY(8deg) rotateX(-2deg)}}@keyframes orbit{to{transform:rotate(405deg)}}@keyframes orbit2{to{transform:rotateX(71deg) rotateZ(382deg)}}@keyframes twinkle{0%,100%{opacity:.3;transform:scale(.75)}50%{opacity:1;transform:scale(1.25)}}@keyframes marquee{to{transform:translateX(-50%)}}
+    .content-section{padding-top:82px}
+    .section-tag{display:inline-block;margin-top:13px;padding:6px 10px;border:1px solid #80683b;color:#dfc782;font-size:9px;letter-spacing:.18em;text-transform:uppercase}
+    .member-empty{max-width:760px;margin:auto;padding:35px;border:1px dashed #6c5a36;background:radial-gradient(ellipse at 50% 0,#a57d3218,transparent 70%),#11100e;text-align:center}
+    .member-empty strong{display:block;color:#ecd9a9;font-family:Georgia,serif;font-weight:500;font-size:24px;margin-bottom:7px}
+    .member-empty p{max-width:540px;margin:0 auto;color:#aaa49a;font-size:13px;line-height:1.8}
+    .rules-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+    .rule-card,.step-card{border:1px solid #3e3524;background:linear-gradient(145deg,#171512,#0f0f0e 72%);padding:23px;position:relative;overflow:hidden}
+    .rule-card{min-height:158px}
+    .rule-card .rule-no,.step-card .step-no{font:italic 28px Georgia,serif;color:#b99a5b}
+    .rule-card h3,.step-card h3{font:500 21px Georgia,serif;color:#e7d7ae;margin:8px 0}
+    .rule-card p,.step-card p{color:#aaa49a;font-size:12px;line-height:1.8;margin:0}
+    .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+    .step-card{min-height:190px}
+    .application-box{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-top:24px;padding:25px;border:1px solid #5b492a;background:linear-gradient(120deg,#1b1710,#0e0e0d 70%)}
+    .application-box h3{font:500 24px Georgia,serif;color:#e7d7ae;margin:0 0 8px}
+    .application-box p{color:#aaa49a;font-size:12px;line-height:1.8;margin:0}
+    .application-template{white-space:pre-wrap;border:1px solid #4a3d25;background:#0b0b0a;color:#d7ceb9;padding:17px;font:12px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace}
+    .copy-row{display:flex;align-items:center;gap:12px;margin-top:12px}
+    .copy-status{min-height:1em;color:#cbb574;font-size:11px}
+    @media(max-width:820px){.rules-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.application-box{grid-template-columns:1fr}}
     @media(max-width:820px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:76px}.hero-copy{text-align:center}.hero-copy p{margin-left:auto;margin-right:auto}.eyebrow,.actions{justify-content:center}.hero-note{text-align:center}.sigil-stage{height:430px;grid-row:1}.coin-wrap{width:250px;height:250px}.sigil-stage:before{width:350px;height:350px}.sigil-stage:after{width:290px;height:290px}.orbit-mark{width:395px;height:395px}.coin-floor{width:300px}.pillars{grid-template-columns:1fr}.pillar{min-height:185px}.about-grid{grid-template-columns:1fr;gap:15px}.about-mark{min-height:290px}.about-copy{text-align:center}.about-copy h2{text-align:center}.about-list{max-width:480px;margin:22px auto 0;text-align:left}.section{padding:76px 0}.closing-card{padding:29px 24px}}
     @media(max-width:560px){.wrap{padding:0 17px}.top{height:70px}.nav{gap:0}.nav>a:not(.nav-cta){display:none}.hero{padding-top:50px;gap:2px}.sigil-stage{height:340px}.coin-wrap{width:207px;height:207px}.coin-inner{inset:14px}.sigil-stage:before{width:286px;height:286px}.sigil-stage:after{width:240px;height:240px}.orbit-mark{width:320px;height:320px}.coin-floor{width:255px;bottom:4px}.sigil-caption{bottom:-8px;font-size:8px}.hero-copy h1{font-size:59px}.hero-copy p{font-size:14px}.section{padding:65px 0}.section-head{margin-bottom:28px}.manifesto{padding:43px 20px}.about-mark{min-height:240px}.about-mark:before{width:230px;height:230px}.about-mark:after{width:260px;height:260px}.about-mark img{width:130px;height:130px}.about-list{grid-template-columns:1fr 1fr}.closing{padding-bottom:70px}.closing-card{display:block;text-align:center}.closing-card .button{margin-top:19px}.footer{flex-direction:column;text-align:center}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
@@ -27,7 +47,7 @@
 </head>
 <body>
   <div class="ambient" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
-  <header class="top wrap"><a class="brand" href="#start" aria-label="LTE Startseite"><img src="assets/lte-logo.webp?v=3" alt=""><b>LOW TEMPO ELITE</b></a><nav class="nav" aria-label="Hauptnavigation"><a href="#gemeinschaft">Gemeinschaft</a><a href="#ueber-lte">Über LTE</a><a class="nav-cta" href="#kontakt">LTE entdecken&nbsp; ↗</a></nav></header>
+  <header class="top wrap"><a class="brand" href="#start" aria-label="LTE Startseite"><img src="assets/lte-logo.webp?v=3" alt=""><b>LOW TEMPO ELITE</b></a><nav class="nav" aria-label="Hauptnavigation"><a href="#gemeinschaft">Gemeinschaft</a><a href="#mitglieder">Mitglieder</a><a href="#regelwerk">Regelwerk</a><a href="#bewerbung">Bewerbung</a><a class="nav-cta" href="#kontakt">LTE entdecken&nbsp; ↗</a></nav></header>
   <main id="start">
     <section class="hero wrap">
       <div class="hero-copy"><div class="eyebrow">Eine Gilde. Ein gemeinsamer Weg.</div><h1>LOW TEMPO<span class="h1-gold">ELITE</span></h1><p>Zusammen spielen, gemeinsam bauen und die Zeit im Citybuild genießen. Willkommen bei LTE — Low Tempo Elite.</p><div class="actions"><a class="button" href="#gemeinschaft">Unsere Gilde entdecken <span>↘</span></a><a class="button button-quiet" href="#ueber-lte">Das ist LTE</a></div><div class="hero-note">MINECRAFT CITYBUILD · LOW TEMPO ELITE</div></div>
@@ -36,6 +56,56 @@
     <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>LOW TEMPO ELITE</span><i>✦</i><span>GEMEINSAM SPIELEN</span><i>✦</i><span>GEMEINSAM BAUEN</span><i>✦</i><span>LOW TEMPO ELITE</span><i>✦</i><span>GEMEINSAM SPIELEN</span><i>✦</i><span>GEMEINSAM BAUEN</span><i>✦</i><span>LOW TEMPO ELITE</span><i>✦</i><span>GEMEINSAM SPIELEN</span><i>✦</i><span>GEMEINSAM BAUEN</span><i>✦</i><span>LOW TEMPO ELITE</span><i>✦</i><span>GEMEINSAM SPIELEN</span><i>✦</i><span>GEMEINSAM BAUEN</span><i>✦</i></div></div>
     <section class="section wrap" id="gemeinschaft"><div class="section-head reveal"><div class="kicker">Was uns verbindet</div><h2>Zusammen ist mehr drin.</h2><p>LTE steht für gemeinsame Zeit im Spiel: vom ersten Gedanken bis zum fertigen Projekt auf dem Plot.</p></div><div class="pillars"><article class="pillar reveal"><div class="pillar-no">I</div><h3>Citybuild mit Ideen</h3><p>Eigene Projekte, besondere Orte und immer neue Dinge zum Entdecken — Block für Block.</p></article><article class="pillar reveal"><div class="pillar-no">II</div><h3>Gemeinsam statt allein</h3><p>Zusammen spielen, sich gegenseitig helfen und Erfolge als Gilde teilen.</p></article><article class="pillar reveal"><div class="pillar-no">III</div><h3>Im eigenen Tempo</h3><p>Kein Stress um den nächsten Schritt. Wir genießen das Spiel und machen etwas daraus.</p></article></div></section>
     <section class="section wrap" style="padding-top:0"><div class="manifesto reveal"><blockquote>„Große Projekte beginnen mit einem Block — und werden besser, wenn man sie <em>gemeinsam baut.</em>“</blockquote><p>Low Tempo Elite · Gemeinsam im Spiel</p></div></section>
+    <section class="section wrap content-section" id="mitglieder">
+      <div class="section-head reveal">
+        <div class="kicker">Die Gesichter von LTE</div>
+        <h2>Unsere Mitglieder.</h2>
+        <p>Hier entsteht die Übersicht unserer Gilde mit Minecraft-Namen und Rollen.</p>
+      </div>
+      <div class="member-empty reveal">
+        <strong>Mitgliederliste folgt</strong>
+        <p>Sobald die Namen und Aufgaben feststehen, stellen wir unsere Mitglieder hier vor. So bleiben Rollen und Liste aktuell und stimmen mit der Gilde überein.</p>
+      </div>
+    </section>
+
+    <section class="section wrap content-section" id="regelwerk">
+      <div class="section-head reveal">
+        <div class="kicker">Miteinander spielen</div>
+        <h2>Unser Regelwerk.</h2>
+        <p>Ein erster Entwurf für ein faires, entspanntes Miteinander bei LTE. Die Regeln gelten erst nach Abstimmung in der Gilde.</p>
+        <span class="section-tag">Entwurf zur Abstimmung</span>
+      </div>
+      <div class="rules-grid">
+        <article class="rule-card reveal"><div class="rule-no">01</div><h3>Respekt bleibt Pflicht</h3><p>Wir sprechen freundlich miteinander. Beleidigungen, Mobbing und diskriminierendes Verhalten haben bei LTE keinen Platz.</p></article>
+        <article class="rule-card reveal"><div class="rule-no">02</div><h3>Serverregeln gelten</h3><p>Alle halten sich an die Regeln des jeweiligen Servers. Cheats, Exploits oder unerlaubte Vorteile nutzen wir nicht.</p></article>
+        <article class="rule-card reveal"><div class="rule-no">03</div><h3>Eigentum respektieren</h3><p>Wir nehmen keine Items, verändern keine fremden Bauten und betreten keine geschützten Bereiche ohne Erlaubnis.</p></article>
+        <article class="rule-card reveal"><div class="rule-no">04</div><h3>Fair handeln</h3><p>Absprachen zu Handel, Verleih und gemeinsamen Projekten halten wir ein. Wenn etwas schiefläuft, klären wir es offen.</p></article>
+        <article class="rule-card reveal"><div class="rule-no">05</div><h3>Konflikte ruhig klären</h3><p>Bei Streit suchen wir zuerst das direkte Gespräch. Wenn nötig, bitten wir die Gildenleitung um Unterstützung.</p></article>
+        <article class="rule-card reveal"><div class="rule-no">06</div><h3>Privates bleibt privat</h3><p>Wir veröffentlichen keine persönlichen Daten und fragen niemanden nach Passwörtern oder Zugangscodes.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap content-section" id="bewerbung">
+      <div class="section-head reveal">
+        <div class="kicker">Werde Teil der Gilde</div>
+        <h2>So läuft eine Bewerbung.</h2>
+        <p>Ein einfacher Ablauf, damit du weißt, was dich erwartet.</p>
+      </div>
+      <div class="steps">
+        <article class="step-card reveal"><div class="step-no">01</div><h3>Regeln ansehen</h3><p>Lies den Regelentwurf und überlege, ob die entspannte Citybuild-Spielweise von LTE zu dir passt.</p></article>
+        <article class="step-card reveal"><div class="step-no">02</div><h3>Kurz vorstellen</h3><p>Nenne deinen Minecraft-Namen und erzähle kurz, was du gerne spielst oder gemeinsam mit LTE machen möchtest.</p></article>
+        <article class="step-card reveal"><div class="step-no">03</div><h3>Ins Gespräch kommen</h3><p>Die Gildenleitung meldet sich, um dich kennenzulernen und offene Fragen zu klären. Der Kontaktweg wird hier noch ergänzt.</p></article>
+      </div>
+      <div class="application-box reveal">
+        <div><h3>Bewerbung vorbereiten</h3><p>Du kannst diese Vorlage kopieren und ausfüllen. Sobald der Discord-Einladungslink oder Bewerbungskanal feststeht, ergänzen wir hier den direkten Kontakt.</p></div>
+        <div><div class="application-template" id="application-template">Hallo LTE! Ich möchte mich bei Low Tempo Elite bewerben.
+
+Minecraft-Name:
+Was mir am Citybuild Spaß macht:
+Was ich gerne mit der Gilde machen möchte:</div><div class="copy-row"><button class="button" id="copy-application" type="button">Vorlage kopieren</button><span class="copy-status" id="copy-status" aria-live="polite"></span></div></div>
+      </div>
+    </section>
+
     <section class="section wrap" id="ueber-lte"><div class="about-grid"><div class="about-mark reveal"><img src="assets/lte-logo.webp?v=3" alt="Originales LTE-Gildenlogo"></div><div class="about-copy reveal"><div class="kicker">Das ist LTE</div><h2>Low Tempo.<br><span style="color:var(--gold2);font-style:italic">Voller Einsatz.</span></h2><p>LTE steht für Low Tempo Elite — eine Gilde, die Citybuild und gemeinsame Projekte in den Mittelpunkt stellt. Ob bauen, Ideen sammeln oder einfach zusammen online sein: Bei uns darf der Weg genauso viel Spaß machen wie das Ergebnis.</p><p>Diese Website ist unser Treffpunkt im Netz. Hier wächst die Geschichte von LTE weiter — mit den Projekten, Momenten und Ideen unserer Gilde.</p><div class="about-list"><div><i>✦</i> Gemeinsame Bauprojekte</div><div><i>✦</i> Citybuild-Community</div><div><i>✦</i> Hilfsbereitschaft</div><div><i>✦</i> Spielen ohne Hektik</div></div></div></div></section>
     <section class="closing wrap" id="kontakt"><div class="closing-card reveal"><div><h2>Dein nächster Block wartet.</h2><p>LTE — Low Tempo Elite. Gemeinsam wird aus einer Idee ein Ort.</p></div><a class="button" href="#start">Zurück zum Anfang ↑</a></div></section>
   </main>
@@ -43,6 +113,8 @@
   <script>
     const coin=document.getElementById('coin');
     if(matchMedia('(pointer:fine)').matches){document.querySelector('.sigil-stage').addEventListener('pointermove',e=>{const r=e.currentTarget.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;coin.style.animation='none';coin.style.transform=`translateY(-6px) rotateY(${x*24}deg) rotateX(${-y*22}deg)`});document.querySelector('.sigil-stage').addEventListener('pointerleave',()=>{coin.style.transform='';coin.style.animation=''})}
+    const copyButton=document.getElementById('copy-application');
+    if(copyButton){copyButton.addEventListener('click',async()=>{const text=document.getElementById('application-template').innerText;const status=document.getElementById('copy-status');try{await navigator.clipboard.writeText(text);status.textContent='Vorlage kopiert.'}catch{status.textContent='Bitte markiere und kopiere die Vorlage manuell.'}})}
     const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
 </body>
