@@ -172,6 +172,29 @@
     .nav-toggle{display:none}
     @media(max-width:820px){.top{position:relative;z-index:20;height:72px}.nav-toggle{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid #8c703d;border-radius:4px;background:#15120c;color:#f0d99c;font:700 11px/1 Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.nav-toggle-icon{font-size:16px;line-height:1}.nav{display:none;position:absolute;z-index:40;top:calc(100% - 1px);left:17px;right:17px;flex-direction:column;align-items:stretch;gap:0;padding:8px;border:1px solid #6e5934;border-radius:4px;background:linear-gradient(145deg,#19160f,#0c0c0b);box-shadow:0 16px 36px #000c}.nav.is-open{display:flex}.nav>a:not(.nav-cta){display:flex;align-items:center;padding:13px 12px;border-bottom:1px solid #ffffff12;color:#e5dbc5;font-size:12px}.nav>a:not(.nav-cta):last-of-type{border-bottom:0}.nav .nav-cta{display:flex;justify-content:center;margin-top:7px;padding:12px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+      .portal-logo-exit{cursor:pointer}
+    .portal-logo-exit:focus-visible{outline:2px solid #e8c875;outline-offset:8px;border-radius:50%}
+    .harry-overlay[hidden]{display:none}
+    .harry-overlay{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:22px;background:#05030bd9;backdrop-filter:blur(9px);animation:harry-fade .25s ease-out}
+    .harry-dialog{position:relative;width:min(100%,500px);padding:34px 30px 30px;text-align:center;border:1px solid #a66bd0;background:radial-gradient(ellipse at 50% 0,#853cc72a,transparent 55%),linear-gradient(145deg,#18101f,#0b0a0e 74%);box-shadow:0 25px 90px #000b,0 0 45px #9d4dd234}
+    .harry-close{position:absolute;top:10px;right:13px;width:38px;height:38px;border:1px solid #705184;background:#17101e;color:#ead9f6;font-size:25px;cursor:pointer}
+    .harry-kicker{color:#c9a2e8;font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
+    .harry-dialog h2{margin:10px 0 8px;color:#f2e8f8;font:500 clamp(27px,6vw,38px)/1.12 Georgia,serif}
+    .harry-dialog p{margin:0 auto 19px;max-width:370px;color:#bdb2c5;font-size:13px;line-height:1.75}
+    .harry-scene{position:relative;width:180px;height:150px;margin:6px auto 14px;image-rendering:pixelated;animation:harry-bob 1.7s steps(2,end) infinite}
+    .harry-shadow{position:absolute;left:28px;right:22px;bottom:7px;height:16px;background:#0008;border-radius:50%;filter:blur(3px)}
+    .harry-wool{position:absolute;left:20px;top:37px;width:120px;height:78px;border:5px solid #ded8ce;background-color:#f6f1e8;background-image:linear-gradient(90deg,transparent 48%,#ddd6cb 49%,#ddd6cb 52%,transparent 53%),linear-gradient(0deg,transparent 48%,#e4ded4 49%,#e4ded4 52%,transparent 53%);box-shadow:inset -9px -8px 0 #d8d0c6,0 0 26px #dac4ef33}
+    .harry-head{position:absolute;left:125px;top:48px;width:44px;height:49px;border:5px solid #534b53;background:#837981;box-shadow:inset -7px -5px 0 #645b64}
+    .harry-ear{position:absolute;top:-9px;width:11px;height:13px;background:#776d75;border:2px solid #534b53}
+    .harry-ear.left{left:-8px}.harry-ear.right{right:-8px}
+    .harry-eye{position:absolute;top:14px;width:6px;height:6px;background:#f3eced;box-shadow:inset -2px -1px 0 #241e2a}
+    .harry-eye.left{left:7px}.harry-eye.right{right:7px}
+    .harry-muzzle{position:absolute;left:9px;bottom:3px;width:17px;height:12px;background:#ba8794;box-shadow:inset -4px -3px 0 #976976}
+    .harry-leg{position:absolute;top:108px;width:18px;height:27px;background:#7c747b;border:3px solid #514a52;box-shadow:inset -4px 0 #655d64}
+    .harry-leg.l1{left:34px}.harry-leg.l2{left:65px}.harry-leg.l3{left:103px}.harry-leg.l4{left:130px}
+    @keyframes harry-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+    @keyframes harry-fade{from{opacity:0}to{opacity:1}}
+    @media(prefers-reduced-motion:reduce){.harry-scene,.harry-overlay{animation:none}}
   </style>
 </head>
 <body>
@@ -186,7 +209,7 @@
         <div class="portal-energy" aria-hidden="true"></div>
         <span class="portal-spark p1" aria-hidden="true"></span><span class="portal-spark p2" aria-hidden="true"></span><span class="portal-spark p3" aria-hidden="true"></span><span class="portal-spark p4" aria-hidden="true"></span><span class="portal-spark p5" aria-hidden="true"></span>
       </div>
-      <div class="portal-logo-exit" id="portal-scroll-logo" aria-label="LTE-Logo tritt beim Scrollen aus dem Portal hervor">
+      <div class="portal-logo-exit" id="portal-scroll-logo" role="button" tabindex="0" aria-label="LTE-Logo. Dreimal aktivieren, um Harry zu finden" title="Dreimal anklicken für eine Überraschung">
         <div class="coin-wrap portal-coin"><div class="coin-inner"><img src="assets/lte-logo.webp?v=3" alt="LTE — Low Tempo Elite"></div></div>
       </div>
       <div class="portal-welcome reveal">
@@ -371,6 +394,34 @@ Was ist dein Ziel auf OPSucht?</div><div class="copy-row"><button class="button"
     const copyButton=document.getElementById('copy-application');
     if(copyButton){copyButton.addEventListener('click',async()=>{const text=document.getElementById('application-template').innerText;const status=document.getElementById('copy-status');try{await navigator.clipboard.writeText(text);status.textContent='Vorlage kopiert.'}catch{status.textContent='Bitte markiere und kopiere die Vorlage manuell.'}})}
     const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+  <div class="harry-overlay" id="harry-overlay" hidden>
+    <section class="harry-dialog" role="dialog" aria-modal="true" aria-labelledby="harry-title" aria-describedby="harry-message">
+      <button class="harry-close" id="harry-close" type="button" aria-label="Harry-Fenster schließen">×</button>
+      <div class="harry-kicker">Ein geheimes Portalwesen</div>
+      <div class="harry-scene" aria-hidden="true">
+        <div class="harry-shadow"></div>
+        <div class="harry-wool"></div>
+        <div class="harry-head"><span class="harry-ear left"></span><span class="harry-ear right"></span><span class="harry-eye left"></span><span class="harry-eye right"></span><span class="harry-muzzle"></span></div>
+        <span class="harry-leg l1"></span><span class="harry-leg l2"></span><span class="harry-leg l3"></span><span class="harry-leg l4"></span>
+      </div>
+      <h2 id="harry-title">Harry ist aus dem Portal gehüpft!</h2>
+      <p id="harry-message">Das LTE-Schaf und heimliche Wächter vom Clanplot. Määäh!</p>
+      <button class="button" id="harry-return" type="button">Harry zurück aufs Plot schicken</button>
+    </section>
+  </div>
+  <script>
+    const harryPortal=document.getElementById('portal-scroll-logo'),harryOverlay=document.getElementById('harry-overlay'),harryClose=document.getElementById('harry-close'),harryReturn=document.getElementById('harry-return');
+    if(harryPortal&&harryOverlay&&harryClose&&harryReturn){
+      let harryClicks=0,harryReset;
+      const revealHarry=()=>{harryClicks++;clearTimeout(harryReset);harryReset=setTimeout(()=>{harryClicks=0},1300);if(harryClicks>=3){harryClicks=0;harryOverlay.hidden=false;harryClose.focus()}};
+      const closeHarry=()=>{harryOverlay.hidden=true;harryPortal.focus()};
+      harryPortal.addEventListener('click',revealHarry);
+      harryPortal.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();revealHarry()}});
+      harryClose.addEventListener('click',closeHarry);harryReturn.addEventListener('click',closeHarry);
+      harryOverlay.addEventListener('click',e=>{if(e.target===harryOverlay)closeHarry()});
+      document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!harryOverlay.hidden)closeHarry()});
+    }
   </script>
 </body>
 </html>
