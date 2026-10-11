@@ -172,7 +172,12 @@
     .nav-toggle{display:none}
     @media(max-width:820px){.top{position:relative;z-index:20;height:72px}.nav-toggle{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid #8c703d;border-radius:4px;background:#15120c;color:#f0d99c;font:700 11px/1 Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.nav-toggle-icon{font-size:16px;line-height:1}.nav{display:none;position:absolute;z-index:40;top:calc(100% - 1px);left:17px;right:17px;flex-direction:column;align-items:stretch;gap:0;padding:8px;border:1px solid #6e5934;border-radius:4px;background:linear-gradient(145deg,#19160f,#0c0c0b);box-shadow:0 16px 36px #000c}.nav.is-open{display:flex}.nav>a:not(.nav-cta){display:flex;align-items:center;padding:13px 12px;border-bottom:1px solid #ffffff12;color:#e5dbc5;font-size:12px}.nav>a:not(.nav-cta):last-of-type{border-bottom:0}.nav .nav-cta{display:flex;justify-content:center;margin-top:7px;padding:12px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
-      .portal-logo-exit{cursor:pointer;pointer-events:auto}
+      .portal-logo-exit{cursor:pointer;pointer-events:auto;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+    .portal-logo-exit *{user-select:none;-webkit-user-select:none;-webkit-user-drag:none;user-drag:none}
+    .portal-logo-exit img{pointer-events:none;-webkit-user-drag:none}
+    .portal-logo-exit:after{content:"";position:absolute;z-index:10;inset:-10px;border:2px solid #e8c875;border-radius:50%;box-shadow:0 0 0 1px #1a1305,0 0 22px #e2bd6866,inset 0 0 15px #e2bd6820;opacity:0;transform:scale(.92);pointer-events:none;transition:opacity .2s ease,transform .2s ease}
+    .portal-logo-exit:hover:after,.portal-logo-exit:focus-visible:after{opacity:1;transform:scale(1)}
+    .portal-logo-exit:hover,.portal-logo-exit:focus-visible{filter:drop-shadow(0 20px 44px #000d) drop-shadow(0 0 36px #f0d99c99)}
     .portal-logo-exit:focus-visible{outline:2px solid #e8c875;outline-offset:8px;border-radius:50%}
     .harry-overlay[hidden]{display:none}
     .harry-overlay{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:22px;background:#05030bd9;backdrop-filter:blur(9px);animation:harry-fade .25s ease-out}
